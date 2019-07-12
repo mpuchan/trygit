@@ -1,0 +1,74 @@
+body{
+	background-color: #808e9b;
+}
+h1{
+
+	text-align: center;
+	/*ketebalan font*/
+	font-weight: 300;
+}
+h2{
+	color :white;
+	font-weight : 300;
+	text-align: center;
+}
+h4{
+	color :white;
+	font-weight : 300;
+	text-align: center;
+}
+form{
+	width: 400px;
+	height: 450px;
+	background: #2c3e50;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+	box-shadow: 0px 0px 50px 4px  black;
+	-webkit-border-radius: 5px;
+
+	border-radius: 5px;
+
+}
+label{
+	color: white;
+	font-size: 11pt;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.container{
+	width: 350px;
+}
+ 
+.main-section{
+    
+    background-color: #fff;
+}
+.profile-header{
+    background-color: #2c3e50;
+    height:150px;
+}
+.user-detail{
+    margin:-50px 0px 30px 0px;
+}
+.user-detail img{
+    height:100px;
+    width:100px;
+}
+.user-detail h5{
+    margin:15px 0px 5px 0px;
+}
+.user-social-detail{
+    padding:15px 0px;
+    background-color:#2c3e50;
+}
+.user-social-detail a i{
+    color:#fff;
+    font-size:23px;
+    padding: 0px 5px;
+}
+
+ 
