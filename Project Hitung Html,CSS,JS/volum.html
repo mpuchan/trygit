@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Perhitungan </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!---- Navisi bar ----->
+  <nav id="navbar" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Aritmatikaku</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="volum.html">Beranda</a></li>
+          <li><a href="Profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!---- FORM ---->
+  <form>
+    <h2>Pilih perhitungan yang diinginkan</h2>
+    <!---- Container----->
+    <div class="container">
+
+      <!---- Carrousel----->
+      <div id="tes-carousel" class="carousel slide" data-ride="carousel">
+        <!-- indikator -->
+        <ol class="carousel-indicators">
+          <li data-target="#tes-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#tes-carousel" data-slide-to="1"></li>
+
+        </ol>
+
+        <div class="carousel-inner">
+
+          <!-- slide 1 -->
+          <div class="item active">
+            <img src="gambar/perhitungan-pajak.jpg" alt="Persegi Panjang" />
+            <!-- caption -->
+            <div class="carousel-caption">
+              <div class="form-group">
+                <a href="#aritmatika" data-toggle="modal">
+                  <button type="submit" class="btn btn-primary" name="change_pass">Perhitungan Aritmatika</button> </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- slide 2 -->
+          <div class="item">
+            <img src="gambar/bangun.png" alt="Demo 2" />
+            <!-- caption -->
+            <div class="carousel-caption">
+              <div class="form-group">
+                <a href="#luasbangun" data-toggle="modal">
+                  <button type="submit" class="btn btn-success" name="change_pass">Perhitungan Luas Bangun</button></a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- kontrol-->
+        <a class="carousel-control left" href="#tes-carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control right" href="#tes-carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+  </form>
+
+  </div>
+  <!-- Modal Perhitungan Aritmatika-->
+  <div id="aritmatika" class="modal fade" tabindex="-1" data-backdrop="static" datrole="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="modal-header">
+          <a href="volum.html">
+            <button type="button" class="close">&times;</button></a>
+          <h4 class="modal-title">Perhitungan Aritmatika</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Nilai 1</label>
+
+            <input class="form-control" name="nilai1" id="nilai1" type="text">
+          </div>
+          <div class="form-group">
+            <label style="font-style: white;">Nilai 2</label>
+            <input class="form-control" name="nilai2" id="nilai2" text="text">
+          </div>
+          <div class="form-group">
+            <label style="font-style: white;">Pilih Method</label>
+            <select class="form-control" name="pilih" id="pilih" text="text">
+              <option name="tambah" value="+">
+                +
+              </option>
+              <option name="kurang" value="-">
+                -
+              </option>
+              <option name="bagi" value="/">
+                /
+              </option>
+              <option name="kali" value="x">
+                x
+              </option>
+              <option name="mod" value="mod">
+                mod
+              </option>
+              <option name="akar" value="^">
+                ^
+              </option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <a href="#aritmatika" datrole="dialog">
+              <button type="button" onclick="calc();">=</button>
+            </a>
+          </div>
+
+          <div class="form-group">
+            <label> Hasil</label>
+            <input class="form-control" type="text" name="hasil" id="hasil" readonly>
+          </div>
+
+      </form>
+    </div>
+  </div>
+  </div>
+  <!-- Modal Perhitungan Aritmatika-->
+  <div id="luasbangun" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="modal-header">
+          <a href="volum.html">
+            <button type="button" class="close">&times;</button></a>
+          <h4 class="modal-title">Menghitung Luas Bangun</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label style="font-style: white;">Pilih Bangun datar</label>
+            <select class="form-control" name="pilih" id="pilih1" text="text"
+              onchange="changeValue(this.selectedIndex)">
+              <option value="Segitiga">
+                Segitiga
+              </option>
+              <option value="Persegi Panjang">
+                Persegi Panjang
+              </option>
+              <option value="Persegi">
+                Persegi
+              </option>
+              <option value="Lingkaran">
+                Lingkaran
+              </option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="inpunum1" id="inpunum1" onclick="calc1()">Masukan nilai1</label>
+
+            <input class="form-control" name="panjang" id="panjang" type="text">
+          </div>
+          <div class="form-group">
+            <label style="font-style: white;" id="inpunum2">Masukan nilai2</label>
+            <input class="form-control" name="lebar" id="lebar" text="text">
+          </div>
+
+          <div class="form-group">
+            <a href="#luasbangun" datrole="dialog">
+              <button type="button" onclick="calc1();">=</button>
+            </a>
+          </div>
+
+          <div class="form-group">
+            <label> Hasil</label>
+            <input class="form-control" type="text" name="hasil" id="result" readonly>
+          </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/rumus.js"></script>
+</body>
+</html>
