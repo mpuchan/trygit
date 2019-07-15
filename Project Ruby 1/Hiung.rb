@@ -6,7 +6,7 @@ class  BangunDatar
         nil1 = gets.to_i
         print "Masukan Tinggi = "
         nil2 = gets.to_i
-        puts (0.5* nil1 * nil2)
+        puts (0.8* nil1 * nil2)
     end
     def Lingkaran
         puts"Anda memilih Luas Lingkaran"
